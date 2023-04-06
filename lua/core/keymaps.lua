@@ -15,6 +15,7 @@ keymap.set("n", "<leader>sh", "<C-w>s") --垂直新增窗口
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+keymap.set("n", "<leader>cf", ":let @+=expand('%:p')<CR>")
 -- ----------插件----------------
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
