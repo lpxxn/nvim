@@ -1,4 +1,3 @@
-
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -51,6 +50,11 @@ return require('packer').startup(function(use)
   }
   -- go
   use("fatih/vim-go")
+  use {
+   -- 'ray-x/go.nvim',
+    'ray-x/guihua.lua',
+    'ray-x/lsp_signature.nvim'
+  }
 
 
   -- 注释  gcc 单行 gc多行
@@ -80,6 +84,11 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use('github/copilot.vim')
+  use('skywind3000/asyncrun.vim')
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
 
   -- using packer.nvim
   if packer_bootstrap then

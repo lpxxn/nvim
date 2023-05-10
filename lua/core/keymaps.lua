@@ -24,3 +24,17 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<C-S-L>", ":bnext<CR>")
 keymap.set("n", "<C-S-H>", ":bprevious<CR>")
 keymap.set("n", "<leader>q", ":bdelete<CR>")
+
+-- signiture
+keymap.set({ 'n' }, '<C-k>', function()       require('lsp_signature').toggle_float_win()
+    end, { silent = true, noremap = true, desc = 'toggle signature' })
+
+keymap.set({ 'n' }, '<Leader>k', function()
+     vim.lsp.buf.signature_help()
+    end, { silent = true, noremap = true, desc = 'toggle signature' })
+
+-- go
+keymap.set("n", "<leader>gd", ":GoDef<CR>")
+keymap.set("n", "<leader>gi", ":GoInfo<CR>")
+keymap.set("n", "<leader>gr", ":GoReferrers<CR>")
+
