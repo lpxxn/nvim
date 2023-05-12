@@ -90,6 +90,9 @@ return require('packer').startup(function(use)
     require("toggleterm").setup()
   end}
 
+  -- use('liuchengxu/vista.vim')
+  use('preservim/tagbar')
+
   -- using packer.nvim
   if packer_bootstrap then
     require('packer').sync()
