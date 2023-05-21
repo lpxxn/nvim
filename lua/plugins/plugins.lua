@@ -55,7 +55,11 @@ return require('packer').startup(function(use)
     'ray-x/guihua.lua',
     'ray-x/lsp_signature.nvim'
   }
-
+  --dap  debug
+  use {
+    'mfussenegger/nvim-dap',
+    'leoluz/nvim-dap-go',
+  }
 
   -- 注释  gcc 单行 gc多行
   use {
@@ -93,6 +97,14 @@ return require('packer').startup(function(use)
   -- use('liuchengxu/vista.vim')
   use('preservim/tagbar')
 
+  -- motion quick move
+  -- use('justinmk/vim-sneak') -- s{char}{char} 两个字符快速移动
+  -- use('easymotion/vim-easymotion') -- <leader><leader>{char} 快速移动
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2' -- optional but strongly recommended
+  }
+  
   -- using packer.nvim
   if packer_bootstrap then
     require('packer').sync()
