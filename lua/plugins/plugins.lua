@@ -95,7 +95,8 @@ return require('packer').startup(function(use)
   end}
 
   -- use('liuchengxu/vista.vim')
-  use('preservim/tagbar')
+  -- use('preservim/tagbar') -- 不好用
+  use('simrat39/symbols-outline.nvim')
 
   -- motion quick move
   -- use('justinmk/vim-sneak') -- s{char}{char} 两个字符快速移动
